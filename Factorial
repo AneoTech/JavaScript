@@ -1,0 +1,45 @@
+
+Here are two ways to calculate the factorial of a number in Javascript:
+
+1. Using a loop:
+
+JavaScript
+/*Code
+function factorial(num) {
+  // Base case
+  if (num === 0 || num === 1) return 1;
+
+  let result = 1;
+  for (let i = num; i > 1; i--) {
+    result *= i;
+  }
+  return result;
+}
+
+// Example usage
+const n = 5;
+const factorialValue = factorial(n);
+console.log(`Factorial of ${n} is: ${factorialValue}`);
+*/
+This function uses a loop to iterate from the given number down to 1, multiplying the result by each number along the way. The base case checks for 0 and 1, as their factorials are known to be 1.
+
+2. Using recursion:
+
+JavaScript
+/*Code
+function factorial(num) {
+  // Base case
+  if (num === 0 || num === 1) return 1;
+
+  // Recursively call the function with num - 1
+  return num * factorial(num - 1);
+}
+
+// Example usage
+const n = 5;
+const factorialValue = factorial(n);
+console.log(`Factorial of ${n} is: ${factorialValue}`);
+*/
+This function recursively calls itself with the number minus 1 until it reaches the base case. This approach is concise but can be less performant for larger numbers due to the function call overhead.
+
+Both methods achieve the same result, so you can choose which one you find more readable or suitable for your specific needs.
